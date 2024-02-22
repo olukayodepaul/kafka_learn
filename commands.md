@@ -69,22 +69,27 @@ To reset the offset of a consumer group
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group <CONSUMER_GROUP> --reset-offsets --to-earliest --execute --topic first_topic
 ```
 This command will reset the offset for a specific topic. To reset for all topics
-
+```yaml {.code-highlight}
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group <CONSUMER_GROUP> --reset-offsets --to-earliest --execute --all-topics
+```
 To go before 2 offset
-
+```yaml {.code-highlight}
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group <CONSUMER_GROUP> --reset-offsets --shift-by -2 --execute --all-topics
+```
 If provided positive number it will shift forward and a negative number will shift backward
 
 To delete a consumer group
-
+```yaml {.code-highlight}
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --delete --group <CONSUMER_GROUP>
+```
 NOTE: You can’t delete a consumer group when it is active
 
 KRaft
 To describe the KRaft meta.properties
-
+```yaml {.code-highlight}
 kafka-metadata-quorum.sh --bootstrap-server localhost:9092 describe --status
+```
 To dump the log file for debugging
-
+```yaml {.code-highlight}
 kafka-dump-log.sh --cluster-metadata-decoder --files <PATH_TO_LOG>
+```
