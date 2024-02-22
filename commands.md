@@ -9,19 +9,19 @@ Table of Contents
 
 ## Topics
 ### To create a new topic
-```
+```yaml {.code-highlight}
 kafka-topics.sh --create --topic <TOPIC_NAME> --bootstrap-server localhost:9092
 ```
 By default the partition is set to 1 and the replication factor is set to 1. You can specify certain partition and replication factor by
-```
+```yaml {.code-highlight}
 kafka-topics.sh --create --topic <TOPIC_NAME> --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
 To list the topics
-```
+```yaml {.code-highlight}
 kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
 To describe a topic
-```
+```yaml {.code-highlight}
 kafka-topics.sh --describe --topic <TOPIC_NAME> --bootstrap-server localhost:9092
 ```
 To delete a topic
