@@ -1,4 +1,3 @@
-yaml {.code-highlight}
 # kafka_learn
 
 
