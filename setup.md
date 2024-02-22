@@ -12,9 +12,9 @@ services:
       - 9092:9092
 
 ```
-> Configurations
+ Configurations
 
-```
+``` yaml {.code-highlight}
 environment:
       - KAFKA_ENABLE_KRAFT=yes
       - KAFKA_CFG_PROCESS_ROLES=broker,controller
@@ -32,7 +32,7 @@ environment:
 
 ### Attach volumes
 
-```
+```yaml {.code-highlight}
 volumes:
       - ./kafka:/bitnami/kafka
 
@@ -40,7 +40,7 @@ volumes:
 
 ### Complete docker-compose.yaml
 
-```
+```yaml {.code-highlight}
 version: "3"
 services:
   kafka:
@@ -67,7 +67,7 @@ services:
 
 ### Run the yaml file
 
-```
+```yaml {.code-highlight}
 docker compose up
 ```
 
