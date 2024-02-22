@@ -71,3 +71,15 @@ services:
 docker compose up
 ```
 
+check container
+
+```yaml {.code-highlight}
+docker ps
+```
+
+run cli
+
+```yaml {.code-highlight}
+docker exec -it <container_id_or_name> /bin/bash
+```
+
