@@ -25,44 +25,49 @@ To describe a topic
 kafka-topics.sh --describe --topic <TOPIC_NAME> --bootstrap-server localhost:9092
 ```
 To delete a topic
-```
+```yaml {.code-highlight}
 kafka-topics.sh --delete --topic <TOPIC_NAME> --bootstrap-server localhost:9092
 ```
 
 ## Producer
 ### To produce messages to the topic
-```
+```yaml {.code-highlight}
 kafka-console-producer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092
 ```
 NOTE: By default if there is no topic exist as you specified then Kafka will create that topic with the default partitions and replication factors mentioned in the server.properties You can edit the default configurations at kafka/config/server.properties
 
 We can set different Acknowledgement level by
-```
+```yaml {.code-highlight}
 kafka-console-producer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092 --producer-property acks=all
 ```
 ## Consumer
 ### To consume the topic
-```
+```yaml {.code-highlight}
 kafka-console-consumer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092
 ```
 By default it will start consuming the message after the above command executed. If need to consume from the beginning
-
+```yaml {.code-highlight}
 kafka-console-consumer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092 --from-beginning
+```
 To have a consumer inside a group
-
+```yaml {.code-highlight}
 kafka-console-consumer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092 --group log-application-group-1
+```
 Consumer Groups
 To list all the consumer groups
-
+```yaml {.code-highlight}
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --list
+```
 To describe a consumer group
-
+```yaml {.code-highlight}
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --group <CONSUMER_GROUP>
+```
 By this command we can check the current offset of the consumer group, the lag and the log offset.
 
 To reset the offset of a consumer group
-
+```yaml {.code-highlight}
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group <CONSUMER_GROUP> --reset-offsets --to-earliest --execute --topic first_topic
+```
 This command will reset the offset for a specific topic. To reset for all topics
 
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group <CONSUMER_GROUP> --reset-offsets --to-earliest --execute --all-topics
