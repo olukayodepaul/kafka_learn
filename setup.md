@@ -2,8 +2,8 @@
 
 #### To setup Kafka with Kraft using Docker Compose
 
-```
-<span style="color:blue"> version: "3" </span>
+```yaml {.code-highlight}
+version: "3" 
 services:
   kafka:
     image: bitnami/kafka
