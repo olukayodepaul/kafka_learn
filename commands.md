@@ -37,12 +37,14 @@ kafka-console-producer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092
 NOTE: By default if there is no topic exist as you specified then Kafka will create that topic with the default partitions and replication factors mentioned in the server.properties You can edit the default configurations at kafka/config/server.properties
 
 We can set different Acknowledgement level by
-
+```
 kafka-console-producer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092 --producer-property acks=all
-Consumer
-To consume the topic
-
+```
+## Consumer
+### To consume the topic
+```
 kafka-console-consumer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092
+```
 By default it will start consuming the message after the above command executed. If need to consume from the beginning
 
 kafka-console-consumer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092 --from-beginning
