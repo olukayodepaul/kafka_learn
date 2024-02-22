@@ -8,9 +8,10 @@ Table of Contents
 - KRaft
 
 ## Topics
-To create a new topic
-
+### To create a new topic
+```
 kafka-topics.sh --create --topic <TOPIC_NAME> --bootstrap-server localhost:9092
+```
 By default the partition is set to 1 and the replication factor is set to 1. You can specify certain partition and replication factor by
 
 kafka-topics.sh --create --topic <TOPIC_NAME> --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
