@@ -13,21 +13,27 @@ Table of Contents
 kafka-topics.sh --create --topic <TOPIC_NAME> --bootstrap-server localhost:9092
 ```
 By default the partition is set to 1 and the replication factor is set to 1. You can specify certain partition and replication factor by
-
+```
 kafka-topics.sh --create --topic <TOPIC_NAME> --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+```
 To list the topics
-
+```
 kafka-topics.sh --list --bootstrap-server localhost:9092
+```
 To describe a topic
-
+```
 kafka-topics.sh --describe --topic <TOPIC_NAME> --bootstrap-server localhost:9092
+```
 To delete a topic
-
+```
 kafka-topics.sh --delete --topic <TOPIC_NAME> --bootstrap-server localhost:9092
-Producer
-To produce messages to the topic
+```
 
+## Producer
+### To produce messages to the topic
+```
 kafka-console-producer.sh --topic <TOPIC_NAME> --bootstrap-server localhost:9092
+```
 NOTE: By default if there is no topic exist as you specified then Kafka will create that topic with the default partitions and replication factors mentioned in the server.properties You can edit the default configurations at kafka/config/server.properties
 
 We can set different Acknowledgement level by
