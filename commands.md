@@ -1,11 +1,13 @@
-Commands
+# Commands
+
 Table of Contents
-Topics
-Producer
-Consumer
-Consumer Groups
-KRaft
-Topics
+- Topics
+- Producer
+- Consumer
+- Consumer Groups
+- KRaft
+
+## Topics
 To create a new topic
 
 kafka-topics.sh --create --topic <TOPIC_NAME> --bootstrap-server localhost:9092
