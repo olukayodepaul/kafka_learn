@@ -93,3 +93,8 @@ To dump the log file for debugging
 ```yaml {.code-highlight}
 kafka-dump-log.sh --cluster-metadata-decoder --files <PATH_TO_LOG>
 ```
+
+To show all messages in a topic
+```yaml {.code-highlight}
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic_name --from-beginning
+```
